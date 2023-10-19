@@ -1,4 +1,10 @@
-### Hi there 👋
+### Hi there 👋, I'm John
+
+<a href="https://github.com/costajohnt">
+<!--   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=costajohnt&show_icons=true" /> -->
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=costajohnt&layout=compact" />
+  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=costajohnt" />
+</a>
 
 <!--
 **costajohnt/costajohnt** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
