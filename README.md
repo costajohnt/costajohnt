@@ -1,22 +1,20 @@
-### Hi there 👋, I'm John
+### Hi there, I'm John
+
+I'm a software developer with over a decade of experience, passionate about **functional programming**, **strongly typed languages**, and **AI tooling**.
+
+Currently focused on:
+
+- Building plugins and tools for [Claude Code](https://claude.ai/claude-code)
+- Creating workflows that help developers ship faster with AI assistance
+- Writing type-safe, functional code (TypeScript, Elm, etc.)
+- Contributing to open source projects
+
+#### Featured Projects
+- **[oss-autopilot](https://github.com/costajohnt/oss-autopilot)** - A Claude Code plugin for managing open source contributions
+
+---
 
 <a href="https://github.com/costajohnt">
-<!--   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=costajohnt&show_icons=true" /> -->
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=costajohnt&layout=compact" />
-  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=costajohnt" />
+  <img height="180em" src="https://streak-stats.demolab.com/?user=costajohnt" />
 </a>
-
-<!--
-**costajohnt/costajohnt** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
