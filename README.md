@@ -16,5 +16,4 @@ Currently focused on:
 
 <a href="https://github.com/costajohnt">
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=costajohnt&layout=compact" />
-  <img height="180em" src="https://streak-stats.demolab.com/?user=costajohnt" />
 </a>
