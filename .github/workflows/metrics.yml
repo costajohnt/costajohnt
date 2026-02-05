@@ -1,0 +1,38 @@
+name: Generate Metrics
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # daily at 6am UTC
+  workflow_dispatch:
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: General stats
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: costajohnt
+          template: classic
+          base: header, activity, community, repositories
+          base.indepth: true
+          config_timezone: America/New_York
+          config_display: large
+          filename: metrics.svg
+
+      - name: Languages
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: costajohnt
+          template: classic
+          base: ""
+          plugin_languages: yes
+          plugin_languages_sections: most-used
+          plugin_languages_indepth: true
+          plugin_languages_analysis_timeout: 30
+          config_timezone: America/New_York
+          filename: metrics-languages.svg

@@ -1,13 +1,21 @@
-### Hi there, I'm John
+<div align="center">
 
-I'm a software developer with over a decade of experience, passionate about **functional programming**, **strongly typed languages**, and **AI tooling**.
+<a href="https://github.com/costajohnt">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=6E57F7&center=true&vCenter=true&random=false&width=620&lines=Hi+there%2C+I'm+John;Building+tools+for+Claude+Code;Functional+programming+enthusiast;Type-safe+code+%7C+AI+tooling" alt="Typing SVG" />
+</a>
 
-#### Tech Stack
+I'm a software developer with over a decade of experience, passionate about<br/>
+**functional programming**, **strongly typed languages**, and **AI tooling**.
 
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
-![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=flat&logo=ruby&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+<br/>
+
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=ts,ruby,nodejs,react&theme=dark" alt="Tech Stack" />
+</a>
+
+</div>
+
+<br/>
 
 #### Currently Focused On
 
@@ -18,11 +26,25 @@ I'm a software developer with over a decade of experience, passionate about **fu
 
 #### Featured Projects
 
-[![oss-autopilot](https://github-readme-stats.vercel.app/api/pin/?username=costajohnt&repo=oss-autopilot&theme=dark&hide_border=true)](https://github.com/costajohnt/oss-autopilot)
+| Project | Description |
+|---------|-------------|
+| **[oss-autopilot](https://github.com/costajohnt/oss-autopilot)** | AI-powered autopilot for managing open source contributions with Claude Code |
 
-#### GitHub Stats
+#### Metrics
 
-<a href="https://github.com/costajohnt">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=costajohnt&show_icons=true&theme=dark&hide_border=true&include_all_commits=true" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=costajohnt&layout=compact&theme=dark&hide_border=true" />
-</a>
+<div align="center">
+  <img src="/metrics.svg" alt="GitHub Metrics" />
+  <img src="/metrics-languages.svg" alt="Top Languages" />
+</div>
+
+---
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/costajohnt/costajohnt/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/costajohnt/costajohnt/output/github-snake.svg" />
+  <img alt="contribution snake animation" src="https://raw.githubusercontent.com/costajohnt/costajohnt/output/github-snake-dark.svg" />
+</picture>
+
+</div>
