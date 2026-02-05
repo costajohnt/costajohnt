@@ -4,7 +4,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=6E57F7&center=true&vCenter=true&random=false&width=620&lines=Hi+there%2C+I'm+John;Building+tools+for+Claude+Code;Functional+programming+enthusiast;Type-safe+code+%7C+AI+tooling" alt="Typing SVG" />
 </a>
 
-I'm a software developer with over a decade of experience, passionate about<br/>
+I'm a thoughtful engineer with over a decade of experience, passionate about<br/>
 **functional programming**, **strongly typed languages**, and **AI tooling**.
 
 <br/>
