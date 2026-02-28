@@ -28,7 +28,6 @@ I'm an active open source contributor. Some highlights:
 | [**Super Productivity**](https://github.com/super-productivity/super-productivity) | 5 merged PRs — Jira validation, voice reminders, window controls, time estimation parsing |
 | [**eslint-plugin-unicorn**](https://github.com/sindresorhus/eslint-plugin-unicorn) | New lint rules: `consistent-template-literal-escape`, `prefer-set-size` enhancement |
 | [**Owncast**](https://github.com/owncast/owncast) | 7 merged PRs — features and fixes for the self-hosted streaming platform |
-| [**refined-github**](https://github.com/refined-github/refined-github) | Caching fix for `update-pr-from-base-branch` |
 
 ### Projects
 
