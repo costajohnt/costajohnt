@@ -21,7 +21,7 @@ I care about **functional programming**, **strongly typed languages**, and **bui
 
 I'm an active open source contributor. Some highlights:
 
-![OSS Contributions](https://img.shields.io/endpoint?url=https://oss-autopilot-stats.vercel.app/api/badge/costajohnt)
+![OSS Contributions](https://img.shields.io/endpoint?url=https://oss-autopilot-stats.vercel.app/api/badge/costajohnt&v=2)
 
 | Project | Contributions |
 |---------|--------------|
