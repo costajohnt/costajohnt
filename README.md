@@ -40,6 +40,12 @@ I care about **functional programming**, **strongly typed languages**, and **bui
 </picture>
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=light" />
+  <img alt="Top Contributed Repos" src="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=dark" />
+</picture>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=dark" />
   <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=light" />
   <img alt="Recent Contributions" src="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=dark" />
@@ -49,27 +55,14 @@ I care about **functional programming**, **strongly typed languages**, and **bui
 
 ---
 
-### Highlights
-
-| Project | Contributions |
-|---------|--------------|
-| [**Ink**](https://github.com/vadimdemedes/ink) | 15 merged PRs — bug fixes, new APIs (`renderToString`), kitty keyboard protocol, routing recipe, CI & dependency upgrades |
-| [**Owncast**](https://github.com/owncast/owncast) | 7 merged PRs — features and fixes for the self-hosted streaming platform |
-| [**Super Productivity**](https://github.com/super-productivity/super-productivity) | 6 merged PRs — Jira validation, voice reminders, window controls, time estimation parsing, focus mode |
-| [**Homebrew/brew**](https://github.com/Homebrew/brew) | 2 merged PRs — typing strictness improvements, cask DSL migration fix |
-| [**eslint-plugin-unicorn**](https://github.com/sindresorhus/eslint-plugin-unicorn) | New lint rules: `consistent-template-literal-escape`, `prefer-set-size` enhancement |
-| [**py-pdf/pypdf**](https://github.com/py-pdf/pypdf) | Annotation reply support (`/IRT`) for markup annotations |
-| [**Directus**](https://github.com/directus/directus) | Folder state persistence in file selection drawer |
-| [**nickel-lang/nickel**](https://github.com/nickel-lang/nickel) | `--no-format` flag for `nickel convert` |
-| [**rubyforgood/casa**](https://github.com/rubyforgood/casa) | Nonprofit CASA app — test infrastructure improvements |
-
 ### Projects
 
 | Project | Description |
 |---------|-------------|
 | [**oss-autopilot**](https://github.com/costajohnt/oss-autopilot) | Claude Code plugin for managing open source contributions — track PRs, respond to maintainers, discover issues |
+| [**oss-scout**](https://github.com/costajohnt/oss-scout) | Find open source issues personalized to your contribution history |
 | [**oss-widgets**](https://github.com/costajohnt/oss-widgets) | Live SVG widgets for GitHub contribution stats |
-| [**alpaca-trader**](https://github.com/costajohnt/alpaca-trader) | Automated trading system — multi-strategy pipeline with sentiment analysis, insider signals, and AI-driven position management |
+| [**alpaca-trader**](https://github.com/costajohnt/alpaca-trader) | Automated trading system — multi-strategy pipeline with sentiment analysis and AI-driven position management |
 | [**bounty-hunter**](https://github.com/costajohnt/bounty-hunter) | Claude Code plugin that monitors repos and Algora for bounty issues, sends Telegram alerts, drafts proposals |
 | [**mermaid-to-pdf-vscode**](https://github.com/costajohnt/mermaid-to-pdf-vscode) | VSCode extension to convert Markdown files with Mermaid diagrams to PDF |
 
