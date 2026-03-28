@@ -13,15 +13,43 @@ I care about **functional programming**, **strongly typed languages**, and **bui
   <img src="https://skillicons.dev/icons?i=ts,ruby,nodejs,react&theme=dark" alt="Tech Stack" />
 </a>
 
-</div>
-
 <br/>
 
-### Open Source
+[![OSS Contributions](https://img.shields.io/endpoint?url=https://oss-widgets.vercel.app/api/badge/costajohnt&style=for-the-badge)](https://github.com/costajohnt/oss-autopilot)
 
-I'm an active open source contributor. Some highlights:
+</div>
 
-![OSS Contributions](https://img.shields.io/endpoint?url=https://oss-autopilot-stats.vercel.app/api/badge/costajohnt&v=2)
+---
+
+<div align="center">
+
+### Open Source Contributions
+
+<a href="https://github.com/costajohnt/oss-autopilot">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/card/costajohnt?theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/card/costajohnt?theme=light" />
+  <img alt="OSS Stats" src="https://oss-widgets.vercel.app/api/card/costajohnt?theme=dark" />
+</picture>
+</a>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/activity/costajohnt?theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/activity/costajohnt?theme=light" />
+  <img alt="Activity Graph" src="https://oss-widgets.vercel.app/api/activity/costajohnt?theme=dark" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=light" />
+  <img alt="Recent Contributions" src="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=dark" />
+</picture>
+
+</div>
+
+---
+
+### Highlights
 
 | Project | Contributions |
 |---------|--------------|
@@ -40,16 +68,10 @@ I'm an active open source contributor. Some highlights:
 | Project | Description |
 |---------|-------------|
 | [**oss-autopilot**](https://github.com/costajohnt/oss-autopilot) | Claude Code plugin for managing open source contributions — track PRs, respond to maintainers, discover issues |
+| [**oss-widgets**](https://github.com/costajohnt/oss-widgets) | Live SVG widgets for GitHub contribution stats |
 | [**alpaca-trader**](https://github.com/costajohnt/alpaca-trader) | Automated trading system — multi-strategy pipeline with sentiment analysis, insider signals, and AI-driven position management |
 | [**bounty-hunter**](https://github.com/costajohnt/bounty-hunter) | Claude Code plugin that monitors repos and Algora for bounty issues, sends Telegram alerts, drafts proposals |
 | [**mermaid-to-pdf-vscode**](https://github.com/costajohnt/mermaid-to-pdf-vscode) | VSCode extension to convert Markdown files with Mermaid diagrams to PDF |
-
-### Metrics
-
-<div align="center">
-  <img src="/metrics.svg" alt="GitHub Metrics" />
-  <img src="/metrics-languages.svg" alt="Top Languages" />
-</div>
 
 ---
 
