@@ -25,25 +25,31 @@ I care about **functional programming**, **strongly typed languages**, and **bui
 
 ### Open Source Contributions
 
+<p>
 <a href="https://github.com/costajohnt/oss-autopilot">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/card/costajohnt?theme=dark" />
   <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/card/costajohnt?theme=light" />
-  <img alt="OSS Stats" src="https://oss-widgets.vercel.app/api/card/costajohnt?theme=dark" />
+  <img alt="OSS Stats" src="https://oss-widgets.vercel.app/api/card/costajohnt?theme=dark" width="495" />
 </picture>
 </a>
+</p>
 
+<p>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=light" />
-  <img alt="Top Contributed Repos" src="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=dark" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=dark&minStars=50" />
+  <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=light&minStars=50" />
+  <img alt="Top Contributed Repos" src="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=dark&minStars=50" width="495" />
 </picture>
+</p>
 
+<p>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=dark" />
   <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=light" />
-  <img alt="Recent Contributions" src="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=dark" />
+  <img alt="Recent Contributions" src="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=dark" width="495" />
 </picture>
+</p>
 
 </div>
 
