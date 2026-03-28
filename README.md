@@ -34,12 +34,6 @@ I care about **functional programming**, **strongly typed languages**, and **bui
 </a>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/activity/costajohnt?theme=dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/activity/costajohnt?theme=light" />
-  <img alt="Activity Graph" src="https://oss-widgets.vercel.app/api/activity/costajohnt?theme=dark" />
-</picture>
-
-<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=dark" />
   <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=light" />
   <img alt="Top Contributed Repos" src="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=dark" />
