@@ -13,9 +13,6 @@ I care about **functional programming**, **strongly typed languages**, and **bui
   <img src="https://skillicons.dev/icons?i=ts,ruby,nodejs,react&theme=dark" alt="Tech Stack" />
 </a>
 
-<br/>
-
-[![OSS Contributions](https://img.shields.io/endpoint?url=https%3A%2F%2Foss-widgets.vercel.app%2Fapi%2Fbadge%2Fcostajohnt&style=for-the-badge)](https://github.com/costajohnt/oss-autopilot)
 
 </div>
 
