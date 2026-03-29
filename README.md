@@ -15,7 +15,7 @@ I care about **functional programming**, **strongly typed languages**, and **bui
 
 <br/>
 
-[![OSS Contributions](https://img.shields.io/endpoint?url=https://oss-widgets.vercel.app/api/badge/costajohnt&style=for-the-badge)](https://github.com/costajohnt/oss-autopilot)
+[![OSS Contributions](https://img.shields.io/endpoint?url=https%3A%2F%2Foss-widgets.vercel.app%2Fapi%2Fbadge%2Fcostajohnt&style=for-the-badge)](https://github.com/costajohnt/oss-autopilot)
 
 </div>
 
