@@ -33,19 +33,23 @@ I care about **functional programming**, **strongly typed languages**, and **bui
 </p>
 
 <p>
+<a href="https://github.com/costajohnt/oss-widgets">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=dark&minStars=50" />
   <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=light&minStars=50" />
   <img alt="Top Contributed Repos" src="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=dark&minStars=50" width="495" />
 </picture>
+</a>
 </p>
 
 <p>
+<a href="https://github.com/costajohnt/oss-autopilot">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=dark&minStars=50" />
   <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=light&minStars=50" />
   <img alt="Recent Contributions" src="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=dark&minStars=50" width="495" />
 </picture>
+</a>
 </p>
 
 </div>
