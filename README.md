@@ -61,11 +61,11 @@ I care about **functional programming**, **strongly typed languages**, and **bui
 | Project | Description |
 |---------|-------------|
 | [**oss-autopilot**](https://github.com/costajohnt/oss-autopilot) | Claude Code plugin for managing open source contributions — track PRs, respond to maintainers, discover issues |
-| [**oss-scout**](https://github.com/costajohnt/oss-scout) | Find open source issues personalized to your contribution history |
+| [**oss-scout**](https://github.com/costajohnt/oss-scout) | Find open source issues personalized to your contribution history — three-strategy search, deep vetting, viability scoring |
 | [**oss-widgets**](https://github.com/costajohnt/oss-widgets) | Live SVG widgets for GitHub contribution stats |
-| [**alpaca-trader**](https://github.com/costajohnt/alpaca-trader) | Automated trading system — multi-strategy pipeline with sentiment analysis and AI-driven position management |
-| [**bounty-hunter**](https://github.com/costajohnt/bounty-hunter) | Claude Code plugin that monitors repos and Algora for bounty issues, sends Telegram alerts, drafts proposals |
-| [**mermaid-to-pdf-vscode**](https://github.com/costajohnt/mermaid-to-pdf-vscode) | VSCode extension to convert Markdown files with Mermaid diagrams to PDF |
+| [**ink-scrollable-box**](https://github.com/costajohnt/ink-scrollable-box) | Scrollable container component for Ink with keyboard navigation, vim bindings, and auto-follow |
+| [**ink**](https://github.com/costajohnt/ink) | React for interactive command-line apps (contributor) |
+| [**alpaca-trader**](https://github.com/costajohnt/alpaca-trader) | Automated multi-strategy trading system — sentiment analysis, insider signals, and AI-driven position management |
 
 ---
 
