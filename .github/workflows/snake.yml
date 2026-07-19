@@ -12,12 +12,160 @@ jobs:
       contents: write
     steps:
       - name: Generate snake animations
-        uses: Platane/snk@v3
-        with:
-          github_user_name: costajohnt
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
+        run: |
+          npm install generate-snake-animation@3.5.0
+
+          cat > generate-snake.mjs << 'SCRIPT_EOF'
+          import * as fs from 'node:fs';
+          
+          // GitHub's GraphQL resource-cost limit now rejects contributionsCollection
+          // queries requesting more than ~100 days of contributionDays in one call
+          // (confirmed empirically: 100d OK, 105d+ FAIL — unrelated to whether from/to
+          // bounds are set at all). generate-snake-animation requests a full year in
+          // one unbounded call, so it always fails now. Patch fetch to transparently
+          // split that into ~75-day chunks, merge them back into the same
+          // weeks/contributionDays shape, and hand that back as a single response —
+          // everything downstream (grid/route/svg generation) is untouched.
+          const _fetch = globalThis.fetch;
+          const CHUNK_DAYS = 75;
+          const RANGE_DAYS = 366;
+          
+          const fetchChunk = async (url, headers, login, from, to) => {
+            const query = `
+              query ($login: String!, $from: DateTime!, $to: DateTime!) {
+                user(login: $login) {
+                  contributionsCollection(from: $from, to: $to) {
+                    contributionCalendar {
+                      weeks { contributionDays { contributionCount contributionLevel weekday date } }
+                    }
+                  }
+                }
+              }`;
+            const res = await _fetch(url, {
+              method: 'POST',
+              headers,
+              body: JSON.stringify({ query, variables: { login, from: from.toISOString(), to: to.toISOString() } }),
+            });
+            if (!res.ok) throw new Error(await res.text().catch(() => res.statusText));
+            const { data, errors } = await res.json();
+            if (errors?.[0]) throw errors[0];
+            return data.user.contributionsCollection.contributionCalendar.weeks.flatMap((w) => w.contributionDays);
+          };
+          
+          globalThis.fetch = async (url, init) => {
+            if (typeof url !== 'string' || !url.includes('/graphql') || init?.method !== 'POST') {
+              return _fetch(url, init);
+            }
+            let body;
+            try {
+              body = JSON.parse(init.body);
+            } catch {
+              return _fetch(url, init);
+            }
+            if (!body?.query?.includes('contributionsCollection')) {
+              return _fetch(url, init);
+            }
+          
+            const login = body.variables.login;
+            const to = new Date();
+            to.setUTCHours(0, 0, 0, 0);
+            const from = new Date(to);
+            from.setUTCDate(from.getUTCDate() - RANGE_DAYS);
+          
+            const chunks = [];
+            let cursor = new Date(from);
+            while (cursor < to) {
+              const chunkTo = new Date(cursor);
+              chunkTo.setUTCDate(chunkTo.getUTCDate() + CHUNK_DAYS);
+              chunks.push([new Date(cursor), chunkTo > to ? to : chunkTo]);
+              cursor = chunkTo;
+            }
+          
+            const byDate = new Map();
+            for (const [f, t] of chunks) {
+              const days = await fetchChunk(url, init.headers, login, f, t);
+              for (const d of days) byDate.set(d.date, d);
+            }
+            const sorted = [...byDate.values()].sort((a, b) => a.date.localeCompare(b.date));
+          
+            const anchor = new Date(`${sorted[0].date}T00:00:00Z`);
+            anchor.setUTCDate(anchor.getUTCDate() - sorted[0].weekday);
+            const weeksMap = new Map();
+            for (const d of sorted) {
+              const dayDate = new Date(`${d.date}T00:00:00Z`);
+              const weekIndex = Math.floor((dayDate - anchor) / (7 * 24 * 3600 * 1000));
+              if (!weeksMap.has(weekIndex)) weeksMap.set(weekIndex, []);
+              weeksMap.get(weekIndex).push(d);
+            }
+            const weeks = [...weeksMap.keys()].sort((a, b) => a - b).map((k) => ({ contributionDays: weeksMap.get(k) }));
+          
+            const responseBody = { data: { user: { contributionsCollection: { contributionCalendar: { weeks } } } } };
+            return new Response(JSON.stringify(responseBody), {
+              status: 200,
+              headers: { 'content-type': 'application/json' },
+            });
+          };
+          
+          const { generateSnakeAnimation } = await import('generate-snake-animation');
+          
+          // Palette values copied from Platane/snk's own palettes.ts (github-light /
+          // github-dark) so the output matches what the old action produced.
+          const drawOptionsBase = {
+            sizeDotBorderRadius: 2,
+            sizeCell: 16,
+            sizeDot: 12,
+          };
+          const palettes = {
+            'github-light': {
+              colorBackground: '#ffffff',
+              colorDotBorder: '#1b1f230a',
+              colorDots: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
+              colorEmpty: '#ebedf0',
+              colorSnake: 'purple',
+            },
+            'github-dark': {
+              colorBackground: '#0c1116',
+              colorDotBorder: '#1b1f230a',
+              colorEmpty: '#161b22',
+              colorDots: ['#161b22', '#01311f', '#034525', '#0f6d31', '#00c647'],
+              colorSnake: 'purple',
+            },
+          };
+          const animationOptions = { stepDurationMs: 100, frameByStep: 1 };
+          
+          const outputs = [
+            {
+              filename: 'dist/github-snake.svg',
+              format: 'svg',
+              drawOptions: { ...drawOptionsBase, ...palettes['github-light'] },
+              animationOptions,
+            },
+            {
+              filename: 'dist/github-snake-dark.svg',
+              format: 'svg',
+              drawOptions: { ...drawOptionsBase, ...palettes['github-dark'] },
+              animationOptions,
+            },
+          ];
+          
+          const results = await generateSnakeAnimation(
+            {
+              platform: 'github',
+              username: 'costajohnt',
+              githubToken: process.env.GITHUB_TOKEN,
+            },
+            outputs
+          );
+          
+          fs.mkdirSync('dist', { recursive: true });
+          outputs.forEach((o, i) => {
+            if (!results[i]) throw new Error(`No output generated for ${o.filename}`);
+            fs.writeFileSync(o.filename, results[i]);
+          });
+          console.log('Snake animations generated successfully');
+          SCRIPT_EOF
+
+          node generate-snake.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
