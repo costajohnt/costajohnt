@@ -11,9 +11,8 @@ like Ink and Homebrew or building my own, like [oss-autopilot](https://github.co
 <br/>
 
 <a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=ts,ruby,nodejs,react&theme=dark" alt="Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=ts,swift,ruby,nodejs,react&theme=dark" alt="Tech Stack" />
 </a>
-
 
 </div>
 
@@ -59,14 +58,22 @@ like Ink and Homebrew or building my own, like [oss-autopilot](https://github.co
 
 ### Projects
 
+**Developer tooling**
+
 | Project | Description |
 |---------|-------------|
 | [**oss-autopilot**](https://github.com/costajohnt/oss-autopilot) | Claude Code plugin for managing open source contributions — track PRs, respond to maintainers, discover issues |
-| [**oss-scout**](https://github.com/costajohnt/oss-scout) | Find open source issues personalized to your contribution history |
+| [**oss-scout**](https://github.com/costajohnt/oss-scout) | Find open source issues personalized to your contribution history — three-strategy search, deep vetting, viability scoring |
+| [**prlore**](https://github.com/costajohnt/prlore) | Mines a repo's PR-review history into a portable AGENTS.md conventions file — runs as an MCP server or CLI |
 | [**oss-widgets**](https://github.com/costajohnt/oss-widgets) | Live SVG widgets for GitHub contribution stats |
-| [**alpaca-trader**](https://github.com/costajohnt/alpaca-trader) | Automated trading system — multi-strategy pipeline with sentiment analysis and AI-driven position management |
-| [**bounty-hunter**](https://github.com/costajohnt/bounty-hunter) | Claude Code plugin that monitors repos and Algora for bounty issues, sends Telegram alerts, drafts proposals |
-| [**mermaid-to-pdf-vscode**](https://github.com/costajohnt/mermaid-to-pdf-vscode) | VSCode extension to convert Markdown files with Mermaid diagrams to PDF |
+
+**Apps & experiments**
+
+| Project | Description |
+|---------|-------------|
+| [**murmur**](https://github.com/costajohnt/murmur) | Local, offline voice dictation for macOS — on-device ASR plus a local LLM cleanup pass, nothing leaves your machine |
+| [**SoundCompass**](https://github.com/costajohnt/SoundCompass) | iOS app helping people with single-sided deafness localize sound via the iPhone mic array — GCC-PHAT, CROS passthrough, Watch companion |
+| [**CoralReefAR**](https://github.com/costajohnt/CoralReefAR) | Self-hosted collaborative AR coral reef — procedurally generated polyps, WebSocket-synced, NFC entrypoint |
 
 ---
 
@@ -75,7 +82,7 @@ like Ink and Homebrew or building my own, like [oss-autopilot](https://github.co
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/costajohnt/costajohnt/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/costajohnt/costajohnt/output/github-snake.svg" />
-  <img alt="contribution snake animation" src="https://raw.githubusercontent.com/costajohnt/costajohnt/output/github-snake-dark.svg" />
+  <img alt="contribution snake animation" src="https://raw.githubusercontent.com/costajohnt/costajohnt/output/github-snake.svg" />
 </picture>
 
 </div>
