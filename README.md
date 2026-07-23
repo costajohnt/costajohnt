@@ -5,7 +5,16 @@
 </a>
 
 Software engineer in San Francisco with over a decade of experience.<br/>
-I care about **functional programming**, **strongly typed languages**, and **building tools that make developers faster**.
+**A generalist who keeps ending up in developer experience.**
+
+I work across the stack, but I keep gravitating to the work that makes the job<br/>
+better for the rest of the team: tooling, fast and trustworthy CI/CD, canonical<br/>
+standards that get enforced so the codebase stays predictable, and automating<br/>
+the chores nobody wants. The friction it removes saves real time, but the part<br/>
+I care about is the headspace it gives back.
+
+Same pull in my open source work, whether that's contributing to dev tooling<br/>
+like Ink and Homebrew or building my own, like [oss-autopilot](https://github.com/costajohnt/oss-autopilot).
 
 <br/>
 
