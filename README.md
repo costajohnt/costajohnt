@@ -3,7 +3,7 @@
 # Hi there, I'm John
 
 Software engineer in San Francisco with over a decade of experience.<br/>
-I work across the stack, but I keep coming back to developer experience.
+Generalist by trade, but the work I keep choosing is developer experience.
 
 Same pull in my open source work, whether that's contributing to dev tooling<br/>
 like Ink and Homebrew or building my own, like [oss-autopilot](https://github.com/costajohnt/oss-autopilot).
