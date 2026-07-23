@@ -1,11 +1,12 @@
 <div align="center">
 
-<a href="https://github.com/costajohnt">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=6E57F7&center=true&vCenter=true&random=false&width=620&lines=Hi+there%2C+I'm+John;Building+developer+tools+%26+local-first+AI;Functional+programming+enthusiast;Type-safe+code+%7C+AI+tooling" alt="Typing SVG" />
-</a>
+# Hi there, I'm John
 
 Software engineer in San Francisco with over a decade of experience.<br/>
-I care about **functional programming**, **strongly typed languages**, and **building tools that make developers faster**.
+Generalist by trade, but the work I keep choosing is developer experience.
+
+Same pull in my open source work, whether that's contributing to dev tooling<br/>
+like Ink and Homebrew or building my own, like [oss-autopilot](https://github.com/costajohnt/oss-autopilot).
 
 <br/>
 
