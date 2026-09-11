@@ -77,6 +77,14 @@ like Ink and Homebrew or building my own, like [oss-autopilot](https://github.co
 
 ---
 
+### Contact
+
+I keep my inbox small. Email me only if it is important, you have a job offer for me, or you want to give me money. My time is valuable, and so is yours.
+
+Anything about a project goes on that project's GitHub: bugs, questions, PR nudges. I read every issue and PR there. Email about them only slows me down.
+
+---
+
 <div align="center">
 
 <picture>
