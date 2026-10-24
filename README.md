@@ -20,7 +20,7 @@ like Ink and Homebrew or building my own, like [oss-autopilot](https://github.co
 
 ### Open Source Contributions
 
-300+ merged pull requests to projects outside my own account. Some of the ones I keep coming back to:
+240+ merged pull requests across 80 open source projects with 100+ stars. Some of the ones I keep coming back to:
 
 | Project | Merged PRs |
 |---------|-----------:|
@@ -33,7 +33,7 @@ like Ink and Homebrew or building my own, like [oss-autopilot](https://github.co
 | [directus/directus](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Adirectus%2Fdirectus) | 6 |
 | [oxc-project/oxc](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Aoxc-project%2Foxc) | 5 |
 
-Also merged in remotion, home-assistant/core, croc, refined-github, Actual, uutils/coreutils, React Spectrum, and pypdf.
+Also merged in Prettier, Tailscale, apple/container, rust-clippy, Biome, Nushell, remotion, home-assistant/core, croc, refined-github, Actual, uutils/coreutils, React Spectrum, and pypdf.
 [See them all →](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+-user%3Acostajohnt)
 
 ---
