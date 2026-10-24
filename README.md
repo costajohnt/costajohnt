@@ -11,48 +11,30 @@ like Ink and Homebrew or building my own, like [oss-autopilot](https://github.co
 <br/>
 
 <a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=ts,swift,ruby,nodejs,react&theme=dark" alt="Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=ts,swift,ruby,rust,nodejs,react&theme=dark" alt="Tech Stack" />
 </a>
 
 </div>
 
 ---
 
-<div align="center">
-
 ### Open Source Contributions
 
-<p>
-<a href="https://github.com/costajohnt/oss-autopilot">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/card/costajohnt?theme=dark&minStars=50" />
-  <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/card/costajohnt?theme=light&minStars=50" />
-  <img alt="OSS Stats" src="https://oss-widgets.vercel.app/api/card/costajohnt?theme=dark&minStars=50" width="495" />
-</picture>
-</a>
-</p>
+300+ merged pull requests to projects outside my own account. Some of the ones I keep coming back to:
 
-<p>
-<a href="https://github.com/costajohnt/oss-widgets">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=dark&minStars=50" />
-  <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=light&minStars=50" />
-  <img alt="Top Contributed Repos" src="https://oss-widgets.vercel.app/api/top-repos/costajohnt?theme=dark&minStars=50" width="495" />
-</picture>
-</a>
-</p>
+| Project | Merged PRs |
+|---------|-----------:|
+| [vadimdemedes/ink](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Avadimdemedes%2Fink) | 37 |
+| [super-productivity/super-productivity](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Asuper-productivity%2Fsuper-productivity) | 32 |
+| [owncast/owncast](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Aowncast%2Fowncast) | 12 |
+| [Homebrew/brew](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3AHomebrew%2Fbrew) | 9 |
+| [DioxusLabs/dioxus](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3ADioxusLabs%2Fdioxus) | 7 |
+| [sindresorhus/eslint-plugin-unicorn](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Asindresorhus%2Feslint-plugin-unicorn) | 7 |
+| [directus/directus](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Adirectus%2Fdirectus) | 6 |
+| [oxc-project/oxc](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Aoxc-project%2Foxc) | 5 |
 
-<p>
-<a href="https://github.com/costajohnt/oss-autopilot">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=dark&minStars=50" />
-  <source media="(prefers-color-scheme: light)" srcset="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=light&minStars=50" />
-  <img alt="Recent Contributions" src="https://oss-widgets.vercel.app/api/recent/costajohnt?theme=dark&minStars=50" width="495" />
-</picture>
-</a>
-</p>
-
-</div>
+Also merged in remotion, home-assistant/core, croc, refined-github, Actual, uutils/coreutils, React Spectrum, and pypdf.
+[See them all →](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+-user%3Acostajohnt)
 
 ---
 
@@ -62,18 +44,20 @@ like Ink and Homebrew or building my own, like [oss-autopilot](https://github.co
 
 | Project | Description |
 |---------|-------------|
-| [**oss-autopilot**](https://github.com/costajohnt/oss-autopilot) | Claude Code plugin for managing open source contributions — track PRs, respond to maintainers, discover issues |
-| [**oss-scout**](https://github.com/costajohnt/oss-scout) | Find open source issues personalized to your contribution history — three-strategy search, deep vetting, viability scoring |
-| [**prlore**](https://github.com/costajohnt/prlore) | Mines a repo's PR-review history into a portable AGENTS.md conventions file — runs as an MCP server or CLI |
-| [**oss-widgets**](https://github.com/costajohnt/oss-widgets) | Live SVG widgets for GitHub contribution stats |
+| [**oss-autopilot**](https://github.com/costajohnt/oss-autopilot) | Claude Code plugin for managing open source contributions: track PRs, respond to maintainers, discover issues |
+| [**oss-scout**](https://github.com/costajohnt/oss-scout) | Find open source issues personalized to your contribution history, with deep vetting and viability scoring |
+| [**fleetview**](https://github.com/costajohnt/fleetview) | One screen for all your background coding agents. Claude Code's agent view, ported to opencode, claude, and copilot |
+| [**prlore**](https://github.com/costajohnt/prlore) | Mines a repo's PR-review history into a portable AGENTS.md conventions file. Runs as an MCP server or CLI |
+| [**pr-review-lenses**](https://github.com/costajohnt/pr-review-lenses) | PR review agents for GitHub Copilot CLI and opencode, ported from Anthropic's pr-review-toolkit |
+| **Ink components** | [tree-view](https://github.com/costajohnt/ink-tree-view), [scrollable-box](https://github.com/costajohnt/ink-scrollable-box), [autocomplete](https://github.com/costajohnt/ink-autocomplete), [file-picker](https://github.com/costajohnt/ink-file-picker), [json-viewer](https://github.com/costajohnt/ink-json-viewer), [timer](https://github.com/costajohnt/ink-timer) for building terminal UIs |
 
 **Apps & experiments**
 
 | Project | Description |
 |---------|-------------|
-| [**murmur**](https://github.com/costajohnt/murmur) | Local, offline voice dictation for macOS — on-device ASR plus a local LLM cleanup pass, nothing leaves your machine |
-| [**SoundCompass**](https://github.com/costajohnt/SoundCompass) | iOS app helping people with single-sided deafness localize sound via the iPhone mic array — GCC-PHAT, CROS passthrough, Watch companion |
-| [**CoralReefAR**](https://github.com/costajohnt/CoralReefAR) | Self-hosted collaborative AR coral reef — procedurally generated polyps, WebSocket-synced, NFC entrypoint |
+| [**murmur**](https://github.com/costajohnt/murmur) | Local, offline voice dictation for macOS. On-device ASR plus a local LLM cleanup pass, nothing leaves your machine |
+| [**SoundCompass**](https://github.com/costajohnt/SoundCompass) | iOS app helping people with single-sided deafness localize sound via the iPhone mic array. GCC-PHAT, CROS passthrough, Watch companion |
+| [**CoralReefAR**](https://github.com/costajohnt/CoralReefAR) | Self-hosted collaborative AR coral reef. Procedurally generated polyps, WebSocket-synced, NFC entrypoint |
 
 ---
 
