@@ -2,7 +2,7 @@
 
 # Hi there, I'm John
 
-Software engineer in San Francisco with over a decade of experience.<br/>
+Software engineer in the San Francisco Bay Area with over a decade of experience.<br/>
 Generalist by trade, but the work I keep choosing is developer experience.
 
 Same pull in my open source work, whether that's contributing to dev tooling<br/>
