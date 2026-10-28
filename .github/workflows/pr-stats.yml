@@ -1,0 +1,64 @@
+name: Update PR Stats
+
+on:
+  schedule:
+    - cron: "0 7 * * *" # daily at 7am UTC
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Count merged PRs to 100+ star repos
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_USER: costajohnt
+          MIN_STARS: 100
+        run: |
+          # Same rule as the oss-autopilot dashboard: merged PRs, not to own repos, repo stars >= MIN_STARS.
+          # ponytail: search API caps at 1000 results; fine until ~1000 merged PRs.
+          cursor=""
+          : > prs.tsv
+          while :; do
+            r=$(gh api graphql -F q="is:pr is:merged author:$GH_USER -user:$GH_USER" ${cursor:+-F c="$cursor"} -f query='
+              query($q: String!, $c: String) {
+                search(type: ISSUE, query: $q, first: 100, after: $c) {
+                  pageInfo { hasNextPage endCursor }
+                  nodes { ... on PullRequest { repository { nameWithOwner stargazerCount } } }
+                }
+              }')
+            echo "$r" | jq -r '.data.search.nodes[].repository | [.nameWithOwner, .stargazerCount] | @tsv' >> prs.tsv
+            [ "$(echo "$r" | jq -r .data.search.pageInfo.hasNextPage)" = true ] || break
+            cursor=$(echo "$r" | jq -r .data.search.pageInfo.endCursor)
+          done
+
+          awk -F'\t' -v s="$MIN_STARS" '$2 >= s { print $1 }' prs.tsv | sort | uniq -c > counts.txt
+          total=$(awk '{ t += $1 } END { print t }' counts.txt)
+          repos=$(wc -l < counts.txt | tr -d ' ')
+          # Guard against a failed or truncated search wiping the README numbers.
+          [ "$total" -gt 0 ] || { echo "no PRs found, aborting"; exit 1; }
+
+          sed -E -i "s/^[0-9]+\+? merged pull requests across [0-9]+ open source projects/$total merged pull requests across $repos open source projects/" README.md
+
+          # Table rows: | [owner/repo](...) | N |
+          awk 'NR == FNR { c[$2] = $1; next }
+               match($0, /^\| \[[^]]+\]/) {
+                 repo = substr($0, 4, RLENGTH - 4)
+                 if (repo in c) sub(/\| [0-9]+ \|$/, "| " c[repo] " |")
+               }
+               { print }' counts.txt README.md > README.new
+          mv README.new README.md
+          rm prs.tsv counts.txt
+          git diff --stat
+
+      - name: Commit if changed
+        run: |
+          git diff --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Update merged PR stats"
+          git push
