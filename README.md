@@ -20,11 +20,11 @@ like Ink and Homebrew or building my own, like [oss-autopilot](https://github.co
 
 ### Open Source Contributions
 
-271 merged pull requests across 82 open source projects with 100+ stars. Some of the ones I keep coming back to:
+288 merged pull requests across 83 open source projects with 100+ stars. Some of the ones I keep coming back to:
 
 | Project | Merged PRs |
 |---------|-----------:|
-| [vadimdemedes/ink](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Avadimdemedes%2Fink) | 53 |
+| [vadimdemedes/ink](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Avadimdemedes%2Fink) | 56 |
 | [super-productivity/super-productivity](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Asuper-productivity%2Fsuper-productivity) | 32 |
 | [owncast/owncast](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Aowncast%2Fowncast) | 12 |
 | [Homebrew/brew](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3AHomebrew%2Fbrew) | 9 |
