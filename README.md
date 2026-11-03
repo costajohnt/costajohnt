@@ -20,7 +20,7 @@ like Ink and Homebrew or building my own, like [oss-autopilot](https://github.co
 
 ### Open Source Contributions
 
-305 merged pull requests across 87 open source projects with 100+ stars. Some of the ones I keep coming back to:
+316 merged pull requests across 88 open source projects with 100+ stars. Some of the ones I keep coming back to:
 
 | Project | Merged PRs |
 |---------|-----------:|
