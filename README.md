@@ -20,13 +20,13 @@ like Ink and Homebrew or building my own, like [oss-autopilot](https://github.co
 
 ### Open Source Contributions
 
-324 merged pull requests across 91 open source projects with 100+ stars. Some of the ones I keep coming back to:
+329 merged pull requests across 91 open source projects with 100+ stars. Some of the ones I keep coming back to:
 
 | Project | Merged PRs |
 |---------|-----------:|
 | [vadimdemedes/ink](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Avadimdemedes%2Fink) | 60 |
 | [super-productivity/super-productivity](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Asuper-productivity%2Fsuper-productivity) | 32 |
-| [owncast/owncast](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Aowncast%2Fowncast) | 12 |
+| [owncast/owncast](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Aowncast%2Fowncast) | 13 |
 | [Homebrew/brew](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3AHomebrew%2Fbrew) | 9 |
 | [DioxusLabs/dioxus](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3ADioxusLabs%2Fdioxus) | 7 |
 | [sindresorhus/eslint-plugin-unicorn](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Acostajohnt+repo%3Asindresorhus%2Feslint-plugin-unicorn) | 7 |
