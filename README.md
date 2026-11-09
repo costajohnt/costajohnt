@@ -51,7 +51,9 @@ Also merged in Prettier, Tailscale, apple/container, rust-clippy, Biome, Nushell
 | [**prlore**](https://github.com/costajohnt/prlore) | Mines a repo's PR-review history into a portable AGENTS.md conventions file. Runs as an MCP server or CLI |
 | [**pr-review-lenses**](https://github.com/costajohnt/pr-review-lenses) | PR review agents for GitHub Copilot CLI and opencode, ported from Anthropic's pr-review-toolkit |
 | [**mermaid-to-pdf**](https://github.com/costajohnt/mermaid-to-pdf-vscode) | CLI and MCP tool that converts Markdown with Mermaid diagrams to PDF |
-| **Ink components** | [tree-view](https://github.com/costajohnt/ink-tree-view), [scrollable-box](https://github.com/costajohnt/ink-scrollable-box), [autocomplete](https://github.com/costajohnt/ink-autocomplete), [file-picker](https://github.com/costajohnt/ink-file-picker), [json-viewer](https://github.com/costajohnt/ink-json-viewer), [timer](https://github.com/costajohnt/ink-timer) for building terminal UIs |
+| [**devhud**](https://github.com/costajohnt/devhud) | Local dashboard for Jira cards and GitHub PRs: Node server, Preact SPA, CLI and MCP server |
+| [**bounty-hunter**](https://github.com/costajohnt/bounty-hunter) | Claude Code plugin that monitors GitHub repos and Algora for bounty issues, sends Telegram alerts, and drafts proposals |
+| **Ink components** | [tree-view](https://github.com/costajohnt/ink-tree-view), [scrollable-box](https://github.com/costajohnt/ink-scrollable-box), [autocomplete](https://github.com/costajohnt/ink-autocomplete), [file-picker](https://github.com/costajohnt/ink-file-picker), [json-viewer](https://github.com/costajohnt/ink-json-viewer), [timer](https://github.com/costajohnt/ink-timer) for building terminal UIs, plus [ink-license-check](https://github.com/costajohnt/ink-license-check) for spotting packages missing Ink's MIT attribution |
 
 **Apps & experiments**
 
