@@ -44,11 +44,13 @@ Also merged in Prettier, Tailscale, apple/container, rust-clippy, Biome, Nushell
 
 | Project | Description |
 |---------|-------------|
+| [**rbcop**](https://github.com/costajohnt/rbcop) | RuboCop rewritten in Rust: identical output, about 14x faster in CI. [Write-up](https://jcosta.tech/writing/era-of-rust-rewrites/) |
 | [**oss-autopilot**](https://github.com/costajohnt/oss-autopilot) | Claude Code plugin for managing open source contributions: track PRs, respond to maintainers, discover issues |
 | [**oss-scout**](https://github.com/costajohnt/oss-scout) | Find open source issues personalized to your contribution history, with deep vetting and viability scoring |
 | [**fleetview**](https://github.com/costajohnt/fleetview) | One screen for all your background coding agents. Claude Code's agent view, ported to opencode, claude, and copilot |
 | [**prlore**](https://github.com/costajohnt/prlore) | Mines a repo's PR-review history into a portable AGENTS.md conventions file. Runs as an MCP server or CLI |
 | [**pr-review-lenses**](https://github.com/costajohnt/pr-review-lenses) | PR review agents for GitHub Copilot CLI and opencode, ported from Anthropic's pr-review-toolkit |
+| [**mermaid-to-pdf**](https://github.com/costajohnt/mermaid-to-pdf-vscode) | CLI and MCP tool that converts Markdown with Mermaid diagrams to PDF |
 | **Ink components** | [tree-view](https://github.com/costajohnt/ink-tree-view), [scrollable-box](https://github.com/costajohnt/ink-scrollable-box), [autocomplete](https://github.com/costajohnt/ink-autocomplete), [file-picker](https://github.com/costajohnt/ink-file-picker), [json-viewer](https://github.com/costajohnt/ink-json-viewer), [timer](https://github.com/costajohnt/ink-timer) for building terminal UIs |
 
 **Apps & experiments**
@@ -57,6 +59,7 @@ Also merged in Prettier, Tailscale, apple/container, rust-clippy, Biome, Nushell
 |---------|-------------|
 | [**murmur**](https://github.com/costajohnt/murmur) | Local, offline voice dictation for macOS. On-device ASR plus a local LLM cleanup pass, nothing leaves your machine |
 | [**SoundCompass**](https://github.com/costajohnt/SoundCompass) | iOS app helping people with single-sided deafness localize sound via the iPhone mic array. GCC-PHAT, CROS passthrough, Watch companion |
+| [**awakebar**](https://github.com/costajohnt/awakebar) | Tiny macOS menu bar app that keeps your Mac awake for a set time, using caffeinate under the hood |
 | [**CoralReefAR**](https://github.com/costajohnt/CoralReefAR) | Self-hosted collaborative AR coral reef. Procedurally generated polyps, WebSocket-synced, NFC entrypoint |
 
 ---
