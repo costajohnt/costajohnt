@@ -2,8 +2,14 @@ name: Update PR Stats
 
 on:
   schedule:
-    - cron: "0 7 * * *" # daily at 7am UTC
+    - cron: "0 7 * * *" # daily at 7am UTC, after jcosta.tech's 6am build
   workflow_dispatch:
+  repository_dispatch:
+    types: [oss-stats-updated] # fired by the merge-watcher on claude-worker after the site deploys
+
+concurrency:
+  group: pr-stats
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -13,36 +19,33 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Count merged PRs to 100+ star repos
+      - name: Read merged PR stats from jcosta.tech
         env:
-          GH_TOKEN: ${{ github.token }}
-          GH_USER: costajohnt
-          MIN_STARS: 100
+          # Set by the merge-watcher; Pages CDN can serve the old file for a few minutes.
+          EXPECTED: ${{ github.event.client_payload.prsMerged }}
         run: |
-          # Same rule as the oss-autopilot dashboard: merged PRs, not to own repos, repo stars >= MIN_STARS.
-          # ponytail: search API caps at 1000 results; fine until ~1000 merged PRs.
-          cursor=""
-          : > prs.tsv
-          while :; do
-            r=$(gh api graphql -F q="is:pr is:merged author:$GH_USER -user:$GH_USER" ${cursor:+-F c="$cursor"} -f query='
-              query($q: String!, $c: String) {
-                search(type: ISSUE, query: $q, first: 100, after: $c) {
-                  pageInfo { hasNextPage endCursor }
-                  nodes { ... on PullRequest { repository { nameWithOwner stargazerCount } } }
-                }
-              }')
-            echo "$r" | jq -r '.data.search.nodes[].repository | [.nameWithOwner, .stargazerCount] | @tsv' >> prs.tsv
-            [ "$(echo "$r" | jq -r .data.search.pageInfo.hasNextPage)" = true ] || break
-            cursor=$(echo "$r" | jq -r .data.search.pageInfo.endCursor)
+          # jcosta.tech is the single writer (rule: 100+ stars, all time, own repos excluded).
+          # This job only renders its numbers, so the profile and the site cannot disagree.
+          base=https://jcosta.tech/data
+          for i in 1 2 3 4 5 6 7 8 9 10; do
+            curl --retry 3 --retry-all-errors -fsS "$base/oss-stats.json?t=$(date +%s)" -o stats.json
+            curl --retry 3 --retry-all-errors -fsS "$base/merged-prs.json?t=$(date +%s)" -o prs.json
+            got=$(jq '.prs | length' prs.json)
+            [ -z "$EXPECTED" ] || [ "$got" -ge "$EXPECTED" ] && break
+            # ponytail: bounded wait for the CDN, no event exists for "Pages cache refreshed"
+            echo "site has $got, expected $EXPECTED; waiting for Pages cache ($i/10)"; sleep 60
           done
+          [ -z "$EXPECTED" ] || [ "$got" -ge "$EXPECTED" ] || { echo "site still stale after 10 min"; exit 1; }
+          [ "$(jq '.rule.minStars' stats.json)" = 100 ] || { echo "site rule is not minStars=100; refusing to publish"; exit 1; }
 
-          awk -F'\t' -v s="$MIN_STARS" '$2 >= s { print $1 }' prs.tsv | sort | uniq -c > counts.txt
-          total=$(awk '{ t += $1 } END { print t }' counts.txt)
+          jq -r '.prs[].repo' prs.json | sort | uniq -c > counts.txt
+          total=$(jq '.prs | length' prs.json)
           repos=$(wc -l < counts.txt | tr -d ' ')
-          # Guard against a failed or truncated search wiping the README numbers.
           [ "$total" -gt 0 ] || { echo "no PRs found, aborting"; exit 1; }
 
           sed -E -i "s/^[0-9]+\+? merged pull requests across [0-9]+ open source projects/$total merged pull requests across $repos open source projects/" README.md
+          grep -q "^$total merged pull requests across $repos open source projects" README.md \
+            || { echo "README headline sentence not found; update the sed pattern"; exit 1; }
 
           # Table rows: | [owner/repo](...) | N |
           awk 'NR == FNR { c[$2] = $1; next }
@@ -52,7 +55,7 @@ jobs:
                }
                { print }' counts.txt README.md > README.new
           mv README.new README.md
-          rm prs.tsv counts.txt
+          rm stats.json prs.json counts.txt
           git diff --stat
 
       - name: Commit if changed
@@ -61,4 +64,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -am "Update merged PR stats"
+          git pull --rebase
           git push
