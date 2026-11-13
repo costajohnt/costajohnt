@@ -7,6 +7,10 @@ on:
   repository_dispatch:
     types: [oss-stats-updated] # fired by the merge-watcher on claude-worker after the site deploys
 
+concurrency:
+  group: pr-stats
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -24,8 +28,8 @@ jobs:
           # This job only renders its numbers, so the profile and the site cannot disagree.
           base=https://jcosta.tech/data
           for i in 1 2 3 4 5 6 7 8 9 10; do
-            curl -fsS "$base/oss-stats.json?t=$(date +%s)" -o stats.json
-            curl -fsS "$base/merged-prs.json?t=$(date +%s)" -o prs.json
+            curl --retry 3 --retry-all-errors -fsS "$base/oss-stats.json?t=$(date +%s)" -o stats.json
+            curl --retry 3 --retry-all-errors -fsS "$base/merged-prs.json?t=$(date +%s)" -o prs.json
             got=$(jq '.prs | length' prs.json)
             [ -z "$EXPECTED" ] || [ "$got" -ge "$EXPECTED" ] && break
             # ponytail: bounded wait for the CDN, no event exists for "Pages cache refreshed"
@@ -40,6 +44,8 @@ jobs:
           [ "$total" -gt 0 ] || { echo "no PRs found, aborting"; exit 1; }
 
           sed -E -i "s/^[0-9]+\+? merged pull requests across [0-9]+ open source projects/$total merged pull requests across $repos open source projects/" README.md
+          grep -q "^$total merged pull requests across $repos open source projects" README.md \
+            || { echo "README headline sentence not found; update the sed pattern"; exit 1; }
 
           # Table rows: | [owner/repo](...) | N |
           awk 'NR == FNR { c[$2] = $1; next }
@@ -58,4 +64,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -am "Update merged PR stats"
+          git pull --rebase
           git push
