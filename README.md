@@ -45,6 +45,7 @@ Also merged in Prettier, Tailscale, apple/container, rust-clippy, Biome, Nushell
 | Project | Description |
 |---------|-------------|
 | [**rbcop**](https://github.com/costajohnt/rbcop) | RuboCop rewritten in Rust: identical output, about 14x faster in CI. [Write-up](https://jcosta.tech/writing/era-of-rust-rewrites/) |
+| [**groovyfmt**](https://github.com/costajohnt/groovyfmt) | Fast formatter and linter for Groovy, Gradle and Jenkinsfiles. One static binary, no JVM, built in Rust on tree-sitter. [Write-up](https://jcosta.tech/writing/groovyfmt-groovy-formatter/) |
 | [**oss-autopilot**](https://github.com/costajohnt/oss-autopilot) | Claude Code plugin for managing open source contributions: track PRs, respond to maintainers, discover issues |
 | [**oss-scout**](https://github.com/costajohnt/oss-scout) | Find open source issues personalized to your contribution history, with deep vetting and viability scoring |
 | [**fleetview**](https://github.com/costajohnt/fleetview) | One screen for all your background coding agents. Claude Code's agent view, ported to opencode, claude, and copilot |
