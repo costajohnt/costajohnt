@@ -1,4 +1,4 @@
-name: Update PR Stats
+name: Update Contributions Graphic
 
 on:
   schedule:
@@ -19,8 +19,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Read merged PR stats from jcosta.tech
+      - name: Render contributions graphic from jcosta.tech data
         env:
+          GITHUB_TOKEN: ${{ github.token }}
           # Set by the merge-watcher; Pages CDN can serve the old file for a few minutes.
           EXPECTED: ${{ github.event.client_payload.prsMerged }}
         run: |
@@ -38,31 +39,16 @@ jobs:
           [ -z "$EXPECTED" ] || [ "$got" -ge "$EXPECTED" ] || { echo "site still stale after 10 min"; exit 1; }
           [ "$(jq '.rule.minStars' stats.json)" = 100 ] || { echo "site rule is not minStars=100; refusing to publish"; exit 1; }
 
-          jq -r '.prs[].repo' prs.json | sort | uniq -c > counts.txt
-          total=$(jq '.prs | length' prs.json)
-          repos=$(wc -l < counts.txt | tr -d ' ')
-          [ "$total" -gt 0 ] || { echo "no PRs found, aborting"; exit 1; }
-
-          sed -E -i "s/^[0-9]+\+? merged pull requests across [0-9]+ open source projects/$total merged pull requests across $repos open source projects/" README.md
-          grep -q "^$total merged pull requests across $repos open source projects" README.md \
-            || { echo "README headline sentence not found; update the sed pattern"; exit 1; }
-
-          # Table rows: | [owner/repo](...) | N |
-          awk 'NR == FNR { c[$2] = $1; next }
-               match($0, /^\| \[[^]]+\]/) {
-                 repo = substr($0, 4, RLENGTH - 4)
-                 if (repo in c) sub(/\| [0-9]+ \|$/, "| " c[repo] " |")
-               }
-               { print }' counts.txt README.md > README.new
-          mv README.new README.md
-          rm stats.json prs.json counts.txt
-          git diff --stat
+          python3 scripts/contributions.py prs.json assets
+          rm stats.json prs.json
+          git status --short
 
       - name: Commit if changed
         run: |
-          git diff --quiet && exit 0
+          git add -A assets
+          git diff --cached --quiet && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -am "Update merged PR stats"
+          git commit -m "Update contributions graphic"
           git pull --rebase
           git push
